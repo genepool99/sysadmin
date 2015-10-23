@@ -1,0 +1,11 @@
+Whats running on port 3306. Take note of the pid currently running.
+
+AS ROOT
+lsof -i:3306
+Then kill it
+
+Quote:
+kill -9 PROCESS
+e.g. kill -9 13498
+
+Then try to restart MySQL again.
