@@ -1,10 +1,9 @@
-Whats running on port 3306. Take note of the pid currently running.
+What is running on port 3306? Take note of the pid currently running.
 
-AS ROOT
+As root try:
 lsof -i:3306
-Then kill it
 
-Quote:
+Then kill it:
 kill -9 PROCESS
 e.g. kill -9 13498
 
