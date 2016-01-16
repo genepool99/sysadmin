@@ -1,0 +1,25 @@
+## BASICS
+block an IP:
+iptables -A INPUT -s xx.xx.xx.xx -j DROP
+
+block an IP for a specific port:
+iptables -A INPUT -p tcp -s xx.xx.xx.xx --dport PORT -j DROP
+
+allow access to an IP:
+iptables -A INPUT -s xx.xx.xx.xx -j ACCEPT
+
+allow access to an IP to a specific port:
+iptables -A INPUT -p tcp -s xx.xx.xx.xx --dport PORT -j ACCEPT
+
+## Listing Rules
+iptables -L
+or 
+iptables -L -n # with port numbers
+
+## Insert an iptables rule on a specific line number
+# get the iptables list
+iptables -nL --line-numbers 
+# insert rule
+iptables -I INPUT {LINE_NUMBER} -i eth1 -p tcp --dport 21 -s 123.123.123.123 -j ACCEPT -m comment --comment "This rule is here for this reason"
+# save rules for next reboot
+ iptables-save > /etc/iptables.local
