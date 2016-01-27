@@ -1,0 +1,11 @@
+# backup: # 
+mysqldump -u root -p[root_password] [database_name] > dumpfilename.sql
+
+# restore:# 
+mysql -u root -p[root_password] [database_name] < dumpfilename.sql
+
+## Single DB
+# backup:
+mysqldump -u root -ptmppassword dbname > dbname.sql
+# restore:
+mysqldump -u root -p[root_password] [database_name] > dumpfilename.sql
