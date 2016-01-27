@@ -1,0 +1,6 @@
+tar -zcvf archive-name.tar.gz directory-name
+
+# -z : Compress archive using gzip program
+# -c: Create archive
+# -v: Verbose i.e display progress while creating archive
+# -f: Archive File name
