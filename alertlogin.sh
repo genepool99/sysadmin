@@ -1,5 +1,5 @@
 #!/bin/bash
-# put this script in /etc/profile.d to send the PUSHOVER_USER a message
+# put this script in /etc/profile.d or /etc/rc.local to send the PUSHOVER_USER a message
 # when someone is logged in to the server
 
 PREFIX="LOGIN ALERT!";
